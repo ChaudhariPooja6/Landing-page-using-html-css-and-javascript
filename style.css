@@ -1,0 +1,578 @@
+:root {
+    --orange-color: #da722c;
+    --dark-blue-color: #023047;
+    --dark-color: #070917;
+    --light-color: #e8f7fb;
+    --light-blue-color: #6f7dfb;
+}
+
+*,
+*::after,
+*::before{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    font-family: "poppins", sans-serif;
+}
+
+.wrapper{
+    max-width: 1134px;
+    margin: 0 auto;
+
+}
+
+/* buttons */
+
+.btn{
+    padding: 16px 32px;
+    border-radius: 24px;
+    color: #fff;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    position: relative;
+}
+
+.btn.dark{
+    background: var(--dark-blue-color);
+}
+
+.btn.light{
+    background: var(--orange-color);
+}
+
+
+.btn.enrol-icon::before{
+    content: url('Images/Enroll-now-icon.svg');
+    position: absolute;
+    top: 50%;
+    left: 32px;
+    transform: translateY(-50%);
+}
+
+.btn.enrol-icon{
+    padding-left: 60px;
+}
+
+/* Header */
+
+header{
+    background: linear-gradient(180deg, #6f7dfb, #26308c 100%);
+    height: 100vh;
+    width: 100%;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 1134px;
+    top: 0;
+    padding: 36px 0;
+    z-index: 100;
+    transition: all 500ms ease;
+}
+
+nav.scrolled{
+    background: var(--dark-color);
+    box-shadow: 0 16px 14px -8px rgba(0, 0, 0, 0.3);
+    border-radius:  0 0 8px 8px;
+    padding: 12px;
+    z-index: 100;
+}
+
+nav .logo{
+    font-family: "Raleway", sans-serif;
+    font-weight: 900;
+    font-size: 40px;
+    color: #ffffff;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    list-style: none;
+    margin: 0;
+}
+
+nav ul li a{
+    font-family: "Poppins", sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+/* Hero Section */
+
+.hero-section{
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 60px;
+    position: relative;
+}
+
+.hero-section .left h1{
+    font-family: "Raleway", sans-serif;
+    font-weight: 900;
+    font-size: 50px;
+    line-height: 125%;
+    color: #ffffff;
+    margin-bottom: 0;
+}
+
+.hero-section .left p{
+    font-family: "poppins", sans-serif;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 200%;
+    color: #ffffff;
+    margin-bottom: 30px;
+    width: 457px;
+
+}
+
+.hero-section .left{
+    flex: 1;
+}
+
+.hero-section .right{
+    align-self: flex-end;
+}
+.hero-section .right img{
+    height: 520px;
+    vertical-align: middle;
+}
+
+/* Achievment Cards */
+
+.achivement-card{
+    position: absolute;
+}
+
+.achivement-card .content{
+    border-radius: 24px;
+    background: #ffffff;
+    padding: 8px 32px;
+    z-index: 10;
+    position: relative;
+}
+
+.achivement-card.students-enrolled{
+    left: 49%;
+    top: 270px;
+}
+
+.achivement-card.overall-rating{
+    left: 45%;
+    top: 400px;  
+}
+
+.achivement-card .content div{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    
+}
+
+.achivement-card .content h3{
+    font-family: "poppins", sans-serif;
+    font-weight: bold;
+    font-size: 36px;
+    color: var(--dark-blue-color);
+    margin: 0;
+    text-align: center;
+    width: 100%;
+}
+
+.achivement-card .content p{
+    font-family: "poppins", sans-serif;
+    font-weight: normal;
+    font-size: 16px;
+    color: var(--dark-blue-color);
+    margin-top: -8px;
+    margin-bottom: 8px;
+    text-align: center;
+}
+
+.achivement-card .bg{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(180deg, #6f7dfb 0%, #3b448f 100%);
+    border-radius: 24px;
+    top: 8px;
+    left: 8px;
+    z-index: 1;
+}
+
+/*Testimonial Section*/
+
+section{
+    margin-top: 100px; /*each section (testimonial, course, app) we have gap of 100px so we have set margin top 100px for each section*/
+}
+
+/* Each section has heading h2, so for all h2 headings we have set the common css */
+h2{
+    font-family:"Raleway", sans-serif;
+    font-weight: 900;
+    font-size: 60px;
+    color: var(--dark-blue-color);
+    line-height: 120%;
+    margin: 0;
+}
+
+/* In course section we have h2 heading but which is in whitle color. by above css we have set the 
+css for h2 heading but for white text we have declared one class light for h2 in course section so,we have write below css */
+h2.light{
+    color: #ffffff;
+}
+
+/* Each section has p tag, so for all p in sections we have set the common css */
+section p{
+    font-family:"Poppins", sans-serif;
+    font-weight: normal;
+    font-size: 16px;
+    color: var(--dark-blue-color);
+    line-height: 120%;
+    margin: 12px 0;
+}
+
+/* we have appied flex to testimonial section, so that data is placed horizontally */
+.testimonial-section{
+    display: flex;
+    gap: 100px;
+    align-items: center; /*we want all the items to be in center vertically in flex */
+}
+
+/* we have add mobile button for mobile, so we have to hide it for desktop and tab view */
+.testimonial-section .mobile-btn{
+    display: none;
+}
+
+/* css for both testimonial card (whole card) */
+.testimonial-section .left .testimonial-card{
+    width: 442px;
+    background: #ffffff;
+    box-shadow: 0px 9px 36px rgba(0, 0, 0, 0.2);
+    border-radius: 24px;
+    margin-bottom: 50px; /* gap between both the cards is 50px */
+    position: relative; /* in order to keep image beside content and info, we have to make it relative to testimonial card, 
+    so we apply position relative to testimonial card */
+}
+
+/* we need to add rectangle design to both the cards, we used before selector, it is used to add extra information to element */
+.testimonial-section .left .testimonial-card::before{
+    content: "";
+    width: 28px;
+    position: absolute;
+    height: 40px;
+    top: -40px;
+    left: 60px;
+    background-color: var(--dark-blue-color);
+    border-radius: 24px 24px 0 0;
+}
+
+/* we style the rectangle for 2nd testimonial card */
+.testimonial-section .left .testimonial-card:last-child::before{
+    left: 40px;
+    top: -50px;
+    border-radius: 0 0 24px 24px;
+    height: calc(100% + 90px);
+    z-index: -1;
+}
+
+/* style content section (violet) of each testimonial card */
+.testimonial-section .left .testimonial-card .content{
+    font-family:"Raleway", sans-serif;
+    font-weight: 900;
+    font-size: 18px;
+    color: #ffffff;
+    line-height: 150%;
+    border-radius: 24px;
+    padding: 24px 32px;
+    background: var(--light-blue-color);
+}
+
+/* in section testimonial card we have background color orange for content section */
+.testimonial-section .testimonial-card:last-child .content{
+    background: var(--orange-color);
+}
+
+/*in this section we have style h4 tag of testimonial card which is in info class */
+.testimonial-section .left .testimonial-card  .info h4{
+    font-family:"Raleway", sans-serif;
+    font-weight: 900;
+    font-size: px;
+    color: var(--dark-blue-color);
+    line-height: 120%;
+    margin: 0;
+}
+
+/*in this section we have add padding for whole info section*/
+.testimonial-section .left .testimonial-card .info{
+    padding: 24px 32px;
+    background: #ffffff; /* when we add dark blue rectangle to the card at the start, it will 
+                                seen above the info so we have set backgroun color for info */
+    border-radius: 0 0 24px 24px; /* we we add background color to info, sqaure white box created as background, 
+                                    but we want border radious for card so we make border radius for info 24 px */
+}
+
+/*in this section we have style p tag of testimonial card which has class company */
+.testimonial-section .left .testimonial-card .info p.company{
+    font-family:"Raleway", sans-serif;
+    font-weight: lighter;
+    font-size: 18px;
+    color: var(--dark-blue-color);
+    line-height: 120%;
+}
+
+
+/* in order to keep image beside content and info, we have to make it relative to testimonial card, 
+so we apply position absolute to image fix its position */
+.testimonial-section .left .testimonial-card img{
+    width: 120px;
+    height: 120px;
+    position: absolute;
+    right: 32px;
+    bottom: 20px;
+}
+
+/* it shift the last card of testimonial card to right by 20px */
+.testimonial-section .left .testimonial-card:last-child{
+    transform: translateX(20px);
+}
+
+/* we want gap between right side paragraph and button of testimonial section 
+so we put margin bottom for features div so gap will create between paragraph and button */
+.testimonial-section .right .features{
+    margin-bottom: 30px;
+}
+
+/* Courses section */
+
+/* for adding background color to course section and padding around the item in course section */
+.course-section{
+    background: linear-gradient(180deg, #6f7dfb 0%, #26308c 100%);
+    padding: 70px 0;
+    padding-bottom: 120px;
+}
+
+/* it make text "our courses" to center */
+.course-section h2{
+    text-align: center;
+}
+
+/* it keep the both the cards side by side horizontally  and keep gap between cards*/
+.course-section .course-cards{
+    display: flex;
+    gap: 70px;
+}
+
+
+/* it style course card image */
+.course-section .course-cards .course-card img{
+    filter: drop-shadow(0px 4px 8px rgba(0,0,0,0.25));
+    border-radius: 24px;
+}
+
+/* it style each course card */
+.course-section .course-card{
+    background: #ffffff;
+    border-radius: 24px;
+    padding: 0 32px;
+    margin: 40px 0;
+    position: relative;
+}
+
+.course-section .course-cards .course-card::after{
+    content: "";
+    height: 8px;
+    position: absolute;
+    right: 32px;
+    left: 32px;
+    bottom: 0;
+    background: var(--dark-blue-color);
+    border-radius: 24px;
+}
+
+/* it style h3 heading of each course card*/
+.course-section .course-cards .course-card .info h3{
+    font-family:"Raleway", sans-serif;
+    font-weight: 900;
+    font-size: 30px;
+    color: var(--dark-blue-color);
+    line-height: 150%;
+}
+
+/* we want heading and duration in one line so we apply flex to info class */
+.course-section .course-cards .course-card .info{
+    display: flex;
+    gap: 16px;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+/* here we style duration */ 
+.course-section .course-cards .course-card .info .duration{
+    font-family:"Raleway", sans-serif;
+    font-weight: 900;
+    font-size: 16px;
+    color: var(--dark-blue-color);
+    white-space: nowrap; /* 15 an hours prined on the same line, we want it in same line so we write property whitespace: nowarp */
+    line-height: 150%;
+    position: relative; /* to make clock icon relative beisde duration we have to make it position relative of duration class so that we can apply style */
+    padding-left: 20px; /* padding beside duration text */
+}
+
+
+
+
+
+/* here we add clock icon before duration, so we used duration::before */  
+/* to make it relative beisde duration we have to make it position absolute so that we can apply style */
+.course-section .course-cards .course-card .info .duration::before{
+    content: url(Images/Clock-icon.svg);
+    position: absolute;
+    left: -6px;
+    top: 2px;
+}
+
+
+
+/* for keeping button at right, we have to make it relative to wrapper so we make position relative for wrapper */
+.course-section .wrapper{
+    position: relative;
+}
+
+
+/* for keeping button at right, we have to make it relative to wrapper so we make position of button absolute */
+.course-section .wrapper .btn.light{
+    position: absolute;
+    right: 0;
+}
+
+/* app section */
+.app-section{
+    text-align: center;
+}
+
+.app-section .app-buttons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin-top: 24px;
+}
+
+.app-section .app-buttons .app-btn{
+    padding: 16px 30px;
+    background: #000000;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    min-width: 310px;
+}
+
+.app-section .app-buttons .app-btn span{
+    font-family:"Poppins", sans-serif;
+    font-weight: normal;
+    font-size: 20px;
+    color: #ffffff;
+}
+
+/* footer */
+
+footer{
+    background: var(--dark-color);
+    color: #ffffff;
+    padding: 70px 0;
+    margin-top: 100px;
+}
+
+footer .links-container .links a{
+    text-decoration: none;
+    color: #ffffff;
+}
+
+footer .links-container .links h3{
+    color: var(--orange-color);
+}
+
+footer .links-container .links ul{
+    list-style: none;
+    padding-left:  20px;
+}
+
+footer .links-container .links ul li{
+  margin: 16px 0;
+}
+
+footer .links-container{
+    display: grid;
+    grid-template-columns: 2fr 2fr 3fr;
+}
+
+footer .links-container .links .social{
+    margin-left: 20px;
+}
+
+footer .links-container .links .social a{
+    margin-right: 28px;
+}
+
+footer form{
+    margin-left: 20px;
+    margin-top: 16px;
+    position: relative;
+}
+
+footer form input{
+    font-family:"Poppins", sans-serif;
+    font-weight: normal;
+    font-size: 16px;
+    color: #000000;
+    border-radius: 8px;
+    padding: 8px 32px;
+    width: 100%;
+    border: none;
+}
+
+footer form .submit-btn{
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: var(--dark-blue-color);
+    border-radius: 8px;
+    padding: 8px 32px;
+    border: 0;
+    font-family:"Poppins", sans-serif;
+    font-weight: normal;
+    font-size: 16px;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+footer .copy-right{
+    margin-top: 32px;
+}
+
+/* for tablet view we are writing media query, when width is less than 1100 following styles will apply */
+@media(max-width: 1100px){
+    .btn{
+        padding: 12px 32px;
+    }
+
+    
+}
